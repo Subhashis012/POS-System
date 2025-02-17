@@ -26,15 +26,15 @@ const RecentOrder = () => {
 
         {/* Order List */}
         <div className="mt-4 px-6 overflow-y-scroll h-[500px] no-scrollbar">
-          <OrderList />
-          <OrderList />
-          <OrderList />
-          <OrderList />
-          <OrderList />
-          <OrderList />
-          <OrderList />
-          <OrderList />
-          <OrderList />
+          <OrderList time="AM" name="Subha" item="8 Items" table="Table No: 3" />
+          <OrderList time="PM" name="Sayan" item="4 Items" table="Table No: 4"/>
+          <OrderList time="AM" name="Sayak" item="6 Items" table="Table No: 4"/>
+          <OrderList time="AM" name="Rubela" item="9 Items" table="Table No: 6"/>
+          <OrderList time="PM" name="Ruhi" item="2 Items" table="Table No: 3"/>
+          <OrderList time="PM" name="Deep" item="4 Items" table="Table No: 5"/>
+          <OrderList time="AM" name="Tanu" item="3 Items" table="Table No: 2"/>
+          <OrderList time="PM" name="Sapta" item="4 Items" table="Table No: 3"/>
+          <OrderList time="AM" name="Riya" item="5 Items" table="Table No: 1"/>
         </div>
       </div>
     </div>

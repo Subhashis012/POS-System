@@ -38,9 +38,6 @@ const Orders = () => {
         <OrderCard />
         <OrderCard />
         <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
       </div>
       <BottomNav />
     </section>

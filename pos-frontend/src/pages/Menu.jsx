@@ -6,8 +6,11 @@ import MenuContainer from "../components/menu/MenuContainer";
 import CustomerInfo from "../components/menu/CustomerInfo";
 import CartInfo from "../components/menu/CartInfo";
 import Bill from "../components/menu/Bill";
+import { useSelector } from "react-redux";
 
 const Menu = () => {
+
+  const customerData = useSelector((state) => state.customer);
   return (
     <section className="bg-[#1f1f1f] h-[calc(100vh-2rem)] overflow-hidden flex gap-3">
       <div className="flex-[3]">
@@ -23,10 +26,10 @@ const Menu = () => {
               <MdRestaurantMenu className="text-[#f5f5f5] text-4xl" />
               <div className="flex flex-col items-start">
                 <h1 className="text-md text-[#f5f5f5] font-semibold tracking-wide">
-                  Customer Name
+                  {customerData.customerName || "Customer Name"}
                 </h1>
                 <p className="text-xs text-[#ababab] font-medium">
-                  Tabke no. 2
+                  {customerData.tableNo || "Table No"}
                 </p>
               </div>
             </div>

@@ -5,15 +5,22 @@ const config = require('./config/config');
 const globalErrorHandler = require('./middleware/globalErrorHandler');
 const createHttpError = require('http-errors');
 
+
 const app = express();
 
 const PORT = config.port;
 connectDB();
 
+// Middlewares
+app.use(express.json()); // parse incoming request body in json format
+
 // Root EndPoint
 app.get("/", (req, res) => {
     res.json({ message: "Hello World" });
 });
+
+// Other EndPoints
+app.use("/api/user", require('./routes/userRoute'));
 
 // Global Error Handler
 app.use(globalErrorHandler);
